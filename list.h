@@ -25,7 +25,7 @@ class List{
                 const_iterator()
                     : current{nullptr} {}
                 
-                const_iterator & operator*() const{
+                const Object & operator*() const{
                     return retrieve();
                 }
 
@@ -151,7 +151,6 @@ class List{
         //Copy Conctructor
         List (const List & rhs){
             init();
-
             //This for loop works because we have provieded iterator class
             //Also iterator class must have begin() and end() methods
             // !=, == and * operators
@@ -233,7 +232,7 @@ class List{
         void push_front(Object && x){
             insert(begin(),std::move(x));
         }
-        void push_back(const Object &x){
+        void push_back(const Object & x){
             insert(end(),x);
         }
         void push_back(Object && x){
