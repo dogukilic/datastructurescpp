@@ -30,7 +30,7 @@ class List{
                 }
 
                 //prefix increment
-                const_iterator & operator++() const{
+                const_iterator & operator++() {
                     current = current->next;
                     return *this;
                 }
@@ -43,7 +43,7 @@ class List{
                 }
 
                 //prefix decrement
-                const_iterator & operator--() const{
+                const_iterator & operator--() {
                     current = current->prev;
                     return *this;
                 }
@@ -163,7 +163,7 @@ class List{
         
         //Copy Assignment Operator
         List & operator=(const List & rhs){
-            List copy {rhs};
+            List copy = rhs;
             std::swap(*this,copy);
             return *this;
         }
